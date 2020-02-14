@@ -26,6 +26,7 @@ Then run the app:
 
 ```ps1
 cd web-app
+npm install
 npm start
 ```
 
@@ -54,6 +55,7 @@ Then run the app:
 
 ```ps1
 cd api-server
+npm install
 npm start
 ```
 
