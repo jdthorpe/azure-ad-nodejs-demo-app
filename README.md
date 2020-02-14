@@ -34,7 +34,7 @@ npm start
 
 Set environment variables as above then build and run the docker container:
 
-_**Note that** the only reason to do this is to test out the docker build, since the api running in a lonely docker container has no way to call out to the API that might be running in the docker container or from the command line_
+_**Note that** the only reason to do this is to test out the docker build, since the api running in a lonely docker container has no way to call out to the API that might be running in another the docker container or from the command line_
 
 ```ps1
 cd web-app
