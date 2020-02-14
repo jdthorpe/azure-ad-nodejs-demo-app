@@ -8,6 +8,11 @@ const passport = require("passport");
 const bunyan = require("bunyan");
 const request = require("request");
 
+if(process.versions.node.startsWith("v13.")){
+    console.log("WARNING: this app will likely fail to authenticate with node version 13!")
+}
+
+
 const API_HOST = process.env.host || "localhost";
 
 const log = new bunyan({

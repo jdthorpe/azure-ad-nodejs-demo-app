@@ -1,8 +1,14 @@
 # Web app / Web API with azure AD demo
 
 ## Usage
+ 
+Start the web-app and web-api and then visit `localhost:3000`. Adapted from
+the
+[active-directory-node-webapi](https://github.com/Azure-Samples/active-directory-node-webapi)
+exmaple app and [this
+course](https://app.pluralsight.com/library/courses/microsoft-azure-nodejs-secure-services-applications-update/table-of-contents).
 
-Note the environment varialbes are set with powershell syntax.  Adjust for your terminal accordingly
+Note that the environment varialbes are set with powershell syntax below.  Adjust for your terminal accordingly
 
 ### run the web app locally
 
