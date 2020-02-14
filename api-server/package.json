@@ -1,0 +1,16 @@
+{
+    "name": "web-api",
+    "version": "0.0.0",
+    "description": "Azure AD authenticated WebAPI",
+    "author": "Jason Thorpe",
+    "license": "MIT",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "morgan": "^1.9.1",
+        "passport": "^0.4.1",
+        "passport-azure-ad": "^4.2.1"
+    }
+}

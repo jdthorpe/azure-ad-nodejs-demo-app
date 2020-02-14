@@ -1,0 +1,40 @@
+version: "3"
+services:
+    web-api:
+        build: ./api-server
+        image: web-api
+        ports:
+            - "5000:5000"
+        networks:
+            - backend
+        environment:
+            # values taken from the overview blade of the web app registration
+            - tenantName=myAzureTenantName
+            - tenantID=78097809-7890-7809-78097809780970978
+            - clientID=abcdabcd-abcd-abcd-abcdabcdabcdabcda
+            # This is the 'Application ID URI'
+            - audience=https://myAPIregistrationURI
+
+    web-app:
+        build: ./web-app
+        image: web-app
+        networks:
+            - backend
+        ports:
+            - "3000:3000"
+        environment:
+            # the something part of something.onmicrosoft.com near the top
+            # of the overview blade for your Azure AD:
+            - host=web-api
+            - tenantName=myAzureTenantName
+            # taken from the overview blade of your web app registration
+            - tenantID=78097809-7890-7809-78097809780970978
+            - clientID=1324asdf-1234-asdf-1234asdfasdfasdfa
+            # The secrec you creaetd in the `Certificates & secrets` blade for
+            # your web-app registration:
+            - clientSecret=thesecretyoucreatedforyourapp123
+            # Same as the 'audience' above:
+            - appURI=https://myAPIregistrationURI
+
+networks:
+    backend:
